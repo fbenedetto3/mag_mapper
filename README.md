@@ -4,7 +4,7 @@
 MagField-MT is a low-cost magnetic field mapping platform that can be easily assembled using easily avaliable commercially avaliable components. The plaform is constructed using a Ender 3 (or similar) 3d printer and a Metrolab MagVector MV2 Three-Axis Hall Effect Sensor, and controlled by a computer via a LabView interface. 
 
 ## Hardware
-All necessary hardware may be printed using the requisite Ender 3 3D printer. Hardware files are provided in an .stl format for use with any slicing program and .sldprt format to enable modification. M3-25mm bolts and M3 nuts are required to attach the sensor to the mount. 
+All necessary hardware may be printed using the requisite Ender 3 3D printer. [Hardware files](Sensor%20Mounting%20Hardware) are provided in an .stl format for use with any slicing program and .sldprt format to enable modification. M3-25mm bolts and M3 nuts are required to attach the sensor to the mount. 
 
 ## Using Magnetic Field Mapper LabVIEW Program
 To establish a connection between the Arduino, 3D printer, and the LabVIEW program, select the proper COM port for each device and input it into the COM port selection for each device. Select initialize to establish a COM port connection. Ensure the proper COM ports are selected in the event of an error and initialize again.
