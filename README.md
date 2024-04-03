@@ -22,7 +22,4 @@ Generates a csv file with magnetic field mapper gird. Inputting gridGenerator(x,
 This program uses instrument drivers developed by Jón Schone of Proper Printing. The Marlin Instrument Drivers can be found at https://github.com/properprinting/PPC. The LabVIEW folder contains the drivers, but they can be optionally installed into the LabVIEW program files for use in other programs.
 
 ## Arduino Code
-The latest version of the program uses “MV2_analog_Mean_Var.ino”. It operates by calculating the mean and variance of 30 readings after receiving an “M” command over the serial port. The number of readings can be changed in the code by changing the variable “nReads” if the user desires. Additional programs are in the GitHub that automatically send magnetic field data while on, which can be useful during debugging of the sensor. Additional documentation of the sensor is available on https://www.metrolab.com/products/magvector-mv2-magnetometer/.
-
-## References
-- m
+The latest version of the program uses [MV2_analog_Mean_Var.ino](Arduino%20Code/MV2%20Analog%20Mean%20Var/MV2_analog_Mean_Var). It operates by calculating the mean and variance of 30 readings after receiving an “M” command over the serial port. The number of readings can be changed in the code by changing the variable “nReads” if the user desires. Additional programs are in the GitHub that automatically send magnetic field data while on, which can be useful during debugging of the sensor. Additional documentation of the sensor is available on https://www.metrolab.com/products/magvector-mv2-magnetometer/.
