@@ -1,0 +1,10 @@
+mag_mapper
+Copyright 2024 Low Gravity Science and Technology Lab.
+mag_mapper is licensed under GNU GENERAL PUBLIC LICENSE 3.0.
+Copy of the GNU GENERAL PUBLIC LICENSE 3.0 license can be found in `LICENSES/GNU PUBLIC LICENSE` file.
+
+MID
+Copyright (c) 2020 Jón Schone
+Files inside the mag_mapper/LabVIEW Code/National Instruments/Marlin Instrument Driver folder were originally created under the APACHE 2.0 license in https://github.com/properprinting/MID.
+The file has been copied into this project and is unmodified.
+Copy of the APACHE 2.0 license can be found in `LICENSES/APACHE 2.0` file.
