@@ -6,6 +6,8 @@ MagField-MT is a low-cost magnetic field mapping platform that can be easily ass
 ## Hardware
 All necessary hardware may be printed using the requisite Ender 3 3D printer. [Hardware files](Sensor%20Mounting%20Hardware) are provided in an .stl format for use with any slicing program and .sldprt format to enable modification. M3-25mm bolts and M3 nuts are required to attach the sensor to the mount. 
 
+## Downloading the Magnetic Field Mapper LabVIEW Program
+
 ## Using Magnetic Field Mapper LabVIEW Program
 To establish a connection between the Arduino, 3D printer, and the LabVIEW program, select the proper COM port for each device and input it into the COM port selection for each device. Select initialize to establish a COM port connection. Ensure the proper COM ports are selected in the event of an error and initialize again.
 
@@ -22,27 +24,5 @@ This program uses instrument drivers developed by Jón Schone of Proper Printing
 ## Arduino Code
 The latest version of the program uses “MV2_analog_Mean_Var.ino”. It operates by calculating the mean and variance of 30 readings after receiving an “M” command over the serial port. The number of readings can be changed in the code by changing the variable “nReads” if the user desires. Additional programs are in the GitHub that automatically send magnetic field data while on, which can be useful during debugging of the sensor. Additional documentation of the sensor is available on https://www.metrolab.com/products/magvector-mv2-magnetometer/.
 
-## Required Dependencies
-Access to the [MATLAB Optimization Toolbox](https://www.mathworks.com/products/optimization.html) is required to run SLOSH-ML from source.
-
-## Formatting Contour Files
-In order to specify a tank geometry in the app, the user must choose a single contour file, which contains the inner and outer contours of the tank. Contour files contain four comma separated columns: 
-- Column 1: Height of the inner contour (z)
-- Column 2: Radius of the inner contour (r)
-- Column 3: Height of the outer contour (z)
-- Column 4: Radius of the outer contour (r)
-  
-The inner and outer contours begin and end at the same height. It should be noted that the inner and outer contours are not required to have the same number of data points. If one contour has fewer points than the other, the empty space in the array should be filled in with NaN. In the app directory, there is a script titled `generateContour.m`. If the radius of both contours as a function of height are known, the user can modify and run this script to generate contour files for the desired tank geometry. Sample contour files are placed in the `contours` folder.
-
-## Using SLOSH ML
-1. Before running the app file, ensure that all the dependencies listed above are installed. 
-2. Run the app through the MATLAB interface.
-3. Navigate to the Geometry tab and load a contour file through the Load Contour button. The user will be prompted to open a file located in the contours directory. The user can choose from some simple test cases or input custom geometries. The process of building custom contour files is described above. After selecting a file, the chosen geometry will appear on the app figure and the user can adjust the R and Z factors to scale the geometry horizontally or vertically.
-4. Open the Physics tab and input the desired fluid density, surface tension, and acceleration. The user can also edit the integration settings through the Advanced tab, but this is not recommended as changing the number of shallow and deep tank modes could interfere with convergence.
-5. Press the calculate button. The core solver will compute the modes of the system and display the results in the app tables. The user can view eigenvectors and frequencies, mode information, pendulum parameters, and spring parameters in the Bulk Output, Modes, Pendulum, and Spring tabs, respectively. The calculation step can also be completed through the Parametric Analysis tab. This process is described below.
-
-
 ## References
-- B. González, Pablo Martin García, Evan Thomas, Alba Casas Gómez, Juan Trobajo Flecha, Pablo Chiva Ruiz, Manuel Cortés Hernán, Rabia Shahid, Justin Effendi, Evan Sánchez, and Álvaro Romero-Calvo, "Open-Source Propellant Sloshing Modeling and Simulation," 2024 AAS Guidance, Navigation, and Control Conference, Breckenridge, CO, February 1-7, 2024, URL: https://www.researchgate.net/publication/377851094_Open-Source_Propellant_Sloshing_Modeling_and_Simulation
-- D. O. Lomen, “Digital analysis of liquid propellant sloshing in mobile tanks with rotational symmetry,” Tech. Rep. CR-230, NASA, 1965.
-- F.T. Dodge, The New “Dynamic Behavior of Liquids in Moving Containers.” Southwest Research Inst., 2000.
+- m
