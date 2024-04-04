@@ -1,7 +1,7 @@
 # MagField-MT Documentation
 
 ## Overview
-MagField-MT is a low-cost magnetic field mapping platform that can be easily assembled using easily avaliable commercially avaliable components. The plaform is constructed using a Ender 3 (or similar) 3d printer and a Metrolab MagVector MV2 Three-Axis Hall Effect Sensor, and controlled by a computer via a LabView interface. 
+MagField-MT is a low-cost magnetic field mapping platform that can be easily assembled using  commercially avaliable components. The plaform is constructed using a Ender 3 (or similar) 3d printer and a Metrolab MagVector MV2 Three-Axis Hall Effect Sensor, and controlled by a computer via a LabView interface. 
 
 ## Hardware
 All necessary hardware may be printed using the requisite Ender 3 3D printer. [Hardware files](Sensor%20Mounting%20Hardware) are provided in an .stl format for use with any slicing program and .sldprt format to enable modification. M3-25mm bolts and M3 nuts are required to attach the sensor to the mount. 
